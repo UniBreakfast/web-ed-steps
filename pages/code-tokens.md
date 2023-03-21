@@ -1,4 +1,4 @@
-# Code Tokens
+# [🙈](code.md) Code Tokens
 
 ## What are code tokens?
 
@@ -10,6 +10,6 @@ Code tokens are small units of code that are recognized by the [computer](comput
 
 ## Processing code tokens
 
-Tokens are formed by combining characters from the [code](code.md) in a specific way. For example, in [HTML](html.md), the < symbol followed by a letter is a token that represents an HTML tag. In [CSS](css.md), a token might be a color value such as #FF0000, while in [JavaScript](javascript.md), a token might be a variable name like "myVariable".
+Tokens are formed by combining characters from the [code](code.md) in a specific way. For example, in [HTML](html.md), the < symbol followed by a letter is a token that represents an HTML tag (more on [HTML tokens](html-tokens.md)). In [CSS](css.md), a token might be a color value such as #FF0000 (more on [CSS tokens](css-tokens.md)), while in [JavaScript](javascript.md), a token might be a variable name like "myVariable" (more on [JS tokens](js-tokens.md)).
 
 Once the tokens are recognized, they are passed onto a [parser](parser.md), which uses a set of rules to determine [how the tokens are grouped](token-grouping.md) and organized to form a valid expression or instruction (words like directive, statement, commant are also used in this context). The parser then generates an [abstract syntax tree (AST)](ast.md), which is a hierarchical structure that represents the logical structure of the code.
