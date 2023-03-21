@@ -1,0 +1,20 @@
+{
+  "name": "web-ed-steps",
+  "version": "1.0.0",
+  "description": "An educational knowledge base for web development.",
+  "main": "README.md",
+  "scripts": {
+    "count": "node count"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UniBreakfast/web-ed-steps.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UniBreakfast/web-ed-steps/issues"
+  },
+  "homepage": "https://github.com/UniBreakfast/web-ed-steps#readme"
+}
