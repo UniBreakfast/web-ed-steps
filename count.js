@@ -4,10 +4,23 @@
 // filter list to only include files with a size greater than 100 bytes
 // log the list to the console with the size in bytes
 
-const {readdir, stat} = require('fs').promises
+const {readdir, stat, readFile, writeFile} = require('fs').promises
 const {resolve} = require('path')
 
-showListOfWrittenPages()
+showListOfWrittenPages().then(writeStatsToReadme)
+
+async function writeStatsToReadme(stats) {
+  const readme = await readFile('README.md', 'utf8')
+  let text = `
+  Total number of written pages: ${stats.writtenPages.length} (of ${stats.totalCount} planned)
+  `
+
+  stats.writtenPages.forEach(fd => text += `\n- ${fd.name.split('.')[0]} - ${fd.size}`)
+
+  const newReadme = readme.replace(/## Stats(.*)/s, `## Stats\n${text}\n`)
+
+  await writeFile('README.md', newReadme)
+}
 
 async function showListOfWrittenPages() {
   const fileDescriptors = await getFileDescriptors('.md', 'README.md')
@@ -20,6 +33,8 @@ async function showListOfWrittenPages() {
   console.log(`Total number of written pages: ${writtenPages.length} (of ${fileDescriptors.length} planned)\n`)
 
   writtenPages.forEach(fd => console.log(`${fd.name} - ${fd.size} bytes`))
+
+  return {totalCount: fileDescriptors.length, writtenPages}
 }
 
 async function getFileDescriptors(extension, ignore) {

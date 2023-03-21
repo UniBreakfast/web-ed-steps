@@ -4,11 +4,11 @@
 
 ## Stats
 
-Total number of written pages: 6 (of 59 planned)
-
-code-tokens.md - 1872 bytes
-html.md - 1775 bytes
-web.md - 1516 bytes
-code.md - 1342 bytes
-generic-text-editor.md - 863 bytes
-token-grouping.md - 626 bytes
+  Total number of written pages: 6 (of 59 planned)
+  
+- code-tokens - 1872
+- html - 1775
+- web - 1516
+- code - 1342
+- generic-text-editor - 863
+- token-grouping - 626
