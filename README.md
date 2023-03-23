@@ -1,4 +1,4 @@
-# Web Education Steps
+# [Web Education Steps](https://github.com/UniBreakfast/web-ed-steps)
 
 ## [Points to start reading](pages/README.md)
 
